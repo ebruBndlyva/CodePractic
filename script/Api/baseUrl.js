@@ -1,3 +1,3 @@
- let baseUrl = "http://localhost:3000/products/"
+ let baseUrl = "http://localhost:3000/"
 
  export default baseUrl

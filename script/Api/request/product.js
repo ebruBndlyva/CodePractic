@@ -1,7 +1,7 @@
 
 
 
-export async function getAllProducts(url) {
+export async function getAllDatas(url) {
     let data = null;
     let error = null;
 
@@ -12,11 +12,21 @@ export async function getAllProducts(url) {
     return { data, error }
 };
 
-export async function getProductId(url, id) {
+export async function getDataId(url, id) {
     let data = null;
     let error = null;
 
-    await axios.get(`${url}${id}`)
+    await axios.get(`${url}/${id}`)
+        .then(res => data = res.data)
+        .catch(fatal => error = fatal)
+
+    return { data, error }
+};
+export async function postData(url, newObj) {
+    let data = null;
+    let error = null;
+
+    await axios.post(url, newObj)
         .then(res => data = res.data)
         .catch(fatal => error = fatal)
 

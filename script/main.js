@@ -1,24 +1,24 @@
-import baseUrl from "./Api/baseurl.js";
-import { getAllProducts } from "./Api/request/product.js";
+import baseUrl from "./Api/baseUrl.js";
+import { getAllDatas, getDataId } from "./Api/request/product.js";
 let allPhone = []
 const wrapper = document.querySelector(".wrapper")
 const searchInput = document.querySelector("#searchInput")
 const sortForAny = document.querySelector("#sortForAny")
+const navBtn = document.querySelector(".buttons")
+let userID = JSON.parse(localStorage.getItem("userId"))
 
 
 async function GetData() {
-    let products = await getAllProducts(baseUrl)
+    let products = await getAllDatas(`${baseUrl}products`)
     allPhone = products.data
     showProducts(allPhone);
 }
-
-
 function showProducts(productList) {
     wrapper.innerHTML = ""
     productList.forEach(({ id, brand, model, price }) => {
         wrapper.innerHTML += `
          <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card" data-id=${id}>
+                    <div class="card my-3" data-id=${id}>
                         <img src="https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-11/iphone-11-white.jpg" class="card-img-top" alt="iphone">
                         <div class="card-body">
                           <h5 class="card-title">${brand} , ${model}</h5>
@@ -53,16 +53,10 @@ function showProducts(productList) {
         })
     });
 }
-
-
-
-
-
 searchInput.addEventListener("input", function (e) {
     let filterData = allPhone.filter(({ model }) => model.toLowerCase().startsWith(e.target.value.trim().toLowerCase()))
     showProducts(filterData)
 })
-
 sortForAny.addEventListener("change", function (e) {
     let sortedData;
     switch (e.target.value) {
@@ -87,6 +81,31 @@ sortForAny.addEventListener("change", function (e) {
 })
 
 
-
-
 GetData()
+
+
+async function getAllUser() {
+    if (!userID) {
+        navBtn.innerHTML = `
+    <a href="./login.html" class="btn mx-3 btn-primary">Login</a>
+    <a href="./register.html" class="btn btn-secondary">Register</a>
+`
+        return
+    }
+    getDataId(`${baseUrl}users`, userID)
+        .then(res => {
+            navBtn.innerHTML = `
+        <h3 class="mx-3">${res.data.name}</h3>
+       <a href="#" class="out btn btn-danger">Logout</a>
+       `
+            let out = document.querySelector(".out")
+            out.addEventListener("click", function () {
+                localStorage.removeItem("userId")
+                window.location.reload()
+
+            })
+        })
+
+}
+getAllUser()
+

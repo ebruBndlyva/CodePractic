@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="bgc center">
+        <div class="container">
+            <div class="header">
+                <h1><span class="l">L</span>OGIN</h1>
+            </div>
+            <form id="login">
+                <label for="logUserEmail">Email</label>
+                <input type="text" class="inp" name="email" id="logEmail" required>
+                <label for="psw">Password</label>
+                <input type="logPassword"" class="inp" name="psw" id="logPassword">
+                <button type="submit">Enter</button>
+            </form>
+            <div class="signup">
+                <b>Don't have account?</b>
+                <a href="./register.html">Sign up</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./script/login.js"></script>
+</body>
+
+</html>

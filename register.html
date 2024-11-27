@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="bgc center">
+        <div class="container">
+            <div class="header">
+                <h1><span class="l">R</span>EGISTER</h1>
+            </div>
+            <form id="register">
+                <label for="regUserName">Username</label>
+                <input type="text" class="inp" name="uname" id="regUserName" required>
+                <label for="regUserEmail">Email</label>
+                <input type="text" class="inp" name="email" id="regEmail" required>
+                <label for="psw">Password</label>
+                <input type="regPassword"" class="inp" name="psw" id="regPassword">
+                <button type="submit">Enter</button>
+            </form>
+            <div class="signup">
+                <b>Do you have account ?</b>
+                <a href="./login.html">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./script/register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

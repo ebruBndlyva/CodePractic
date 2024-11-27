@@ -1,10 +1,11 @@
-import baseUrl from "./Api/baseurl.js"
-import { getProductId } from "./Api/request/product.js"
+import baseUrl from "./Api/baseUrl.js"
+import { getDataId } from "./Api/request/product.js"
 
 let id = new URLSearchParams(window.location.search).get("id")
 let wrapper = document.querySelector(".wrapper")
 async function GetProduct() {
-    let res = await getProductId(baseUrl, id)
+    let res = await getDataId(`${baseUrl}products`, id)
+    
     let { brand, model, operatingSystem, year, price } = res.data
 
     wrapper.innerHTML = `
