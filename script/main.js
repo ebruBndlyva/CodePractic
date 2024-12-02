@@ -21,7 +21,7 @@ function showProducts(productList) {
                     <div class="card my-3" data-id=${id}>
                         <img src="https://cdn.alloallo.media/catalog/product/apple/iphone/iphone-11/iphone-11-white.jpg" class="card-img-top" alt="iphone">
                         <div class="card-body">
-                          <h5 class="card-title">${brand} , ${model}</h5>
+                          <h5 class="card-title">${brand} , ${model.slice(0,10)}...</h5>
                           <p class="card-text">$${price}</p>
                           <div class="d-flex justify-content-end">
                             <button class="addToFavorites btn btn-danger mx-1"><i class="fa-regular fa-heart"></i></button>
