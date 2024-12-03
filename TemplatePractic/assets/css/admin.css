@@ -174,21 +174,33 @@ input:focus {
     font-size: 25px;
   }
 }
-.staff-table{
-    width: 100%;
-table{
+.staff-table {
+  width: 100%;
+  table {
     width: 100%;
     border-collapse: collapse;
-    thead{
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    
+    thead {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
+    tbody {
+      td:not(:last-child){
+        word-wrap: break-word;
+        white-space: pre-wrap; /* Məzmunun sətirə keçməsinə imkan yaradır */
+        max-width: 80px;
+        font-size: 15px;
+        line-height: 1.5;
+    
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
 }
-}
 
-
-
-th,td{
-    text-align: center;
-    padding: 15px 0;
+th,
+td {
+  text-align: center;
+  padding: 15px 0;
 }

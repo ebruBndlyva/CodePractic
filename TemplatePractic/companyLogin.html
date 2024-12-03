@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./assets/css/login.css">
     <!-- font awsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" integrity="sha512-v8+bPcpk4Sj7CKB11+gK/FnsbgQ15jTwZamnBf/xDmiQDcgOIYufBo6Acu1y30vrk8gg5su4x0CG3zfPaq5Fcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer type="module" src="./assets/Js/compLog.js"></script>
 
 </head>
 
@@ -24,16 +26,16 @@
     <div class="login-wrapper">
         <div class="login-head">
             <div class="reg-img">L</div>
-            <h2>User Login</h2>
+            <h2>Company Login</h2>
         </div>
 
         <div class="login-form">
-            <form>
+            <form class="compLogin-form">
               
-                <label for="email">Email Address *</label>
-                <input type="email" name="emaiAddres" id="email" required>
-                <label for="password">Password *</label>
-                <input type="password" name="password" id="password" required>
+                <label for="name">Company Name *</label>
+                <input type="text" name="companyName" id="logCompName" required>
+                <label for="website">Website *</label>
+                <input type="text" name="companyWebsite" id="logWebsite" required>
               
                 <button type="submit">LOGIN</button>
             </form>

@@ -4,7 +4,7 @@ export async function getAllDatas(url) {
     await axios.get(url)
         .then(res => datas = res.data)
         .catch(err => error = err)
-
+ 
     return {
         datas,
         error

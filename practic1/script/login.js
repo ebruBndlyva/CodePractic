@@ -22,7 +22,7 @@ async function getAllUser() {
         }
         localStorage.setItem("userId", JSON.stringify(findLogUser.id))
         window.location = "./index.html"
-
+ 
     })
 }
 getAllUser()

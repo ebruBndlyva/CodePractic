@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/register.css">
     <!-- font awsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" integrity="sha512-v8+bPcpk4Sj7CKB11+gK/FnsbgQ15jTwZamnBf/xDmiQDcgOIYufBo6Acu1y30vrk8gg5su4x0CG3zfPaq5Fcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer type="module" src="./assets/Js/compReg.js"></script>
 
 </head>
 
@@ -20,21 +22,21 @@
         </div>
 
         <div class="register-form">
-            <form>
-                <label for="name">Full Name *</label>
-                <input type="text" name="fullname" id="name" required>
-                <label for="email">Email Address *</label>
-                <input type="email" name="emaiAddres" id="email" required>
-                <label for="password">Password *</label>
-                <input type="password" name="password" id="password" required>
-                <label for="image">Profil Image *</label>
-                <input type="file" name="profilImage" id="image" required>
+            <form class="companyRegister">
+                <label for="name">Company Name *</label>
+                <input type="text" name="companyName" id="compName" required>
+                <label for="location">Location *</label>
+                <input type="text" name="emaiAddres" id="location" required>
+                <label for="industry">Industry *</label>
+                <input type="text" name="industry" id="industry" required>
+                <label for="website">Website *</label>
+                <input type="text" name="companyWebsite" id="website" required>
                 <button type="submit">REGISTER</button>
             </form>
         </div>
         <div class="register-foot">
             <a href="./register.html">USER REGISTER PAGE</a>
-            <a href="./login.html">ALREADY HAVE AN ACCOUNT? LOGIN</a>
+            <a href="./companyLogin.html">ALREADY HAVE AN ACCOUNT? LOGIN</a>
         </div>
     </div>
    </div>

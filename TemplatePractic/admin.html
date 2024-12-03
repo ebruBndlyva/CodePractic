@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <script defer type="module" src="./assets/Js/admin.js"></script>
+        <!-- axios -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" integrity="sha512-v8+bPcpk4Sj7CKB11+gK/FnsbgQ15jTwZamnBf/xDmiQDcgOIYufBo6Acu1y30vrk8gg5su4x0CG3zfPaq5Fcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -31,8 +33,8 @@
                     <h3>General</h3>
                     <ul>
                         <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-                        <li><a href="#"><i class="fa-solid fa-users"></i>Users</a></li>
-                        <li><a href="#"><i class="fa-solid fa-building"></i>Companies</a></li>
+                        <li><a class="user-link" href="#"><i class="fa-solid fa-users"></i>Users</a></li>
+                        <li><a class="company-link" href="#"><i class="fa-solid fa-building"></i>Companies</a></li>
                         <li><a href="#"><i class="fa-solid fa-gears"></i> Equipments</a></li>
                     </ul>
                 </div>
@@ -74,113 +76,16 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Image</th>
                                 <th>Name</th>
-                                <th>User Name</th>
                                 <th>Password</th>
-                                <th>Contact</th>
                                 <th>Address</th>
-                                <th>#Edit</th>
+                                <th >#Edit</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Rehman Shaikh</td>
-                                <td>rehman1</td>
-                                <td>...........</td>
-                                <td>03000</td>
-                                <td>sukkur</td>
-                                <td>
-                                    <button
-                                        style="text-align: center;background-color: yellow;border: none; padding: 5px 10px; ">Edit</button>
-                                    <button
-                                        style="text-align: center;background-color: red;border: none; padding: 5px 10px; color: white;">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Rehman Shaikh</td>
-                                <td>rehman1</td>
-                                <td>...........</td>
-                                <td>03000</td>
-                                <td>sukkur</td>
-                                <td>
-                                    <button
-                                        style="text-align: center;background-color: yellow;border: none; padding: 5px 10px; ">Edit</button>
-                                    <button
-                                        style="text-align: center;background-color: red;border: none; padding: 5px 10px; color: white;">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Rehman Shaikh</td>
-                                <td>rehman1</td>
-                                <td>...........</td>
-                                <td>03000</td>
-                                <td>sukkur</td>
-                                <td>
-                                    <button
-                                        style="text-align: center;background-color: yellow;border: none; padding: 5px 10px; ">Edit</button>
-                                    <button
-                                        style="text-align: center;background-color: red;border: none; padding: 5px 10px; color: white;">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Rehman Shaikh</td>
-                                <td>rehman1</td>
-                                <td>...........</td>
-                                <td>03000</td>
-                                <td>sukkur</td>
-                                <td>
-                                    <button
-                                        style="text-align: center;background-color: yellow;border: none; padding: 5px 10px; ">Edit</button>
-                                    <button
-                                        style="text-align: center;background-color: red;border: none; padding: 5px 10px; color: white;">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Rehman Shaikh</td>
-                                <td>rehman1</td>
-                                <td>...........</td>
-                                <td>03000</td>
-                                <td>sukkur</td>
-                                <td>
-                                    <button
-                                        style="text-align: center;background-color: yellow;border: none; padding: 5px 10px; ">Edit</button>
-                                    <button
-                                        style="text-align: center;background-color: red;border: none; padding: 5px 10px; color: white;">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Rehman Shaikh</td>
-                                <td>rehman1</td>
-                                <td>...........</td>
-                                <td>03000</td>
-                                <td>sukkur</td>
-                                <td>
-                                    <button
-                                        style="text-align: center;background-color: yellow;border: none; padding: 5px 10px; ">Edit</button>
-                                    <button
-                                        style="text-align: center;background-color: red;border: none; padding: 5px 10px; color: white;">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Rehman Shaikh</td>
-                                <td>rehman1</td>
-                                <td>...........</td>
-                                <td>03000</td>
-                                <td>sukkur</td>
-                                <td>
-                                    <button
-                                        style="text-align: center;background-color: yellow;border: none; padding: 5px 10px; ">Edit</button>
-                                    <button
-                                        style="text-align: center;background-color: red;border: none; padding: 5px 10px; color: white;">Delete</button>
-                                </td>
-                            </tr>
+                         
+                            
                         </tbody>
                     </table>
                 </div>

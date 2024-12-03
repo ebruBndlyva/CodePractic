@@ -76,4 +76,27 @@ body {
   .signup a:hover {
     text-decoration: underline;
   }
-  
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn {
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #0056b3 !important;
+        color: white !important;
+    }
+
+    .navbar-brand {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+    

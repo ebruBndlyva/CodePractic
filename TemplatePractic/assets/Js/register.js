@@ -7,7 +7,7 @@ const regEmail = document.querySelector("#email")
 const regPasw = document.querySelector("#password")
 const regImage = document.querySelector("#image")
 
-
+ 
 
 regForm.addEventListener("submit", function (e) {
     e.preventDefault()
